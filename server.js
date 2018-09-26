@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const post = process.env.PORT || 3000;
 const app = express();
 
 // Handlebars partials
@@ -52,6 +53,6 @@ app.get('/bad', (req, res) => {
 });
 
 // Define port
-app.listen(3000, () => {
-	console.log('running on port 3000');
+app.listen(post, () => {
+	console.log(`running on port ${post}`);
 }); 
